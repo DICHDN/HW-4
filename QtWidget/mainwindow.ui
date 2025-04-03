@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>317</width>
+    <height>197</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Настройки</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QLabel" name="lb_Options">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Опции:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="rB_SlcLst">
+         <property name="text">
+          <string>Разрешить опции</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="cB_Options">
+         <item>
+          <property name="text">
+           <string>Увеличить на 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Увеличить на 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Увеличить на 5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Увеличить на 25%</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Увеличить на 1%</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="rB_BlokPrgBr">
+         <property name="text">
+          <string>Блокировать прогресс</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QProgressBar" name="pB_10">
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="PB_add10">
+         <property name="text">
+          <string>Увеличить на 1</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>317</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>rB_SlcLst</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>cB_Options</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>235</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rB_BlokPrgBr</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pB_10</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PB_add10</sender>
+   <signal>clicked()</signal>
+   <receiver>pB_10</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>151</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rB_BlokPrgBr</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>PB_add10</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rB_SlcLst</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>PB_add10</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>297</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PB_add10</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pB_10</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

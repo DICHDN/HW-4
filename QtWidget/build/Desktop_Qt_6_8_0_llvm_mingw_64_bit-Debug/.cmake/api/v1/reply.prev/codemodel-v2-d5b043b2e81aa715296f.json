@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-570bd7e62b3c6faf93be.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QtWidget",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QtWidget::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtWidget-Debug-17e48988eb772e2a6580.json",
+					"name" : "QtWidget",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtWidget_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtWidget_autogen-Debug-4b5d23899952cb08c6a2.json",
+					"name" : "QtWidget_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QtWidget_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QtWidget_autogen_timestamp_deps-Debug-75f3a3b9665481b70dfe.json",
+					"name" : "QtWidget_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/YandexDisk/YandexDisk/Study/QT/HW-4/QtWidget/build/Desktop_Qt_6_8_0_llvm_mingw_64_bit-Debug",
+		"source" : "F:/YandexDisk/YandexDisk/Study/QT/HW-4/QtWidget"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
