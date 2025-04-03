@@ -176,8 +176,8 @@ void updateButtonText() {
     case 0: increment = 1; break;   // Увеличить на 1
     case 1: increment = 2; break;   // Увеличить на 2
     case 2: increment = 5; break;   // Увеличить на 5
-    case 3: increment = 3; break;   // Увеличить на 25% (25% от 10 = 2.5, округляем до 3)
-    case 4: increment = 1; break;   // Увеличить на 1% (1% от 10 = 0.1, округляем до 1)
+    case 3: increment = 3; break;   // Увеличить на 25%
+    case 4: increment = 1; break;   // Увеличить на 1%
     }
 
     pB_10->setText(QString("Увеличить на %1%").arg(increment * 10 / 10)); // Обновление текста кнопки
